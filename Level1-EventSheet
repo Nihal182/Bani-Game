@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+-<c2eventsheet>
+
+<!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+
+
+<name>Level 1</name>
+
+
+-<events>
+
+<include>Personagem</include>
+
+<include>Enemies</include>
+
+<comment>Peixes saindo da água</comment>
+
+
+-<event-block sid="197681486827105">
+
+
+-<conditions>
+
+
+-<condition sid="997379064815438" type="System" name="Every X seconds" id="-6">
+
+<param name="Interval (seconds)" id="0">random (4.0,7)</param>
+
+</condition>
+
+</conditions>
+
+
+-<actions>
+
+
+-<action sid="220510520729758" type="spawndepeixe" name="Spawn another object" id="0">
+
+<param name="Object" id="0">peixe</param>
+
+<param name="Layer" id="1">1</param>
+
+<param name="Image point" id="2">0</param>
+
+</action>
+
+</actions>
+
+</event-block>
+
+
+-<event-block sid="740376569880856">
+
+
+-<conditions>
+
+<condition sid="949797052688825" type="peixe" name="On created" id="-18"/>
+
+</conditions>
+
+
+-<actions>
+
+
+-<action sid="995432229814478" type="peixe" name="Set angle" id="-8">
+
+<param name="Angle" id="0">270</param>
+
+</action>
+
+
+-<action sid="918600335169870" type="System" name="Wait" id="-16">
+
+<param name="Seconds" id="0">8</param>
+
+</action>
+
+<action sid="321707497453048" type="peixe" name="Destroy" id="-9"/>
+
+</actions>
+
+</event-block>
+
+<comment>Personagem colidindo com a água</comment>
+
+
+-<event-block sid="947073425990473">
+
+
+-<conditions>
+
+
+-<condition sid="205809161695207" type="Personagem" name="On collision with another object" id="0">
+
+<param name="Object" id="0">DanoAgua</param>
+
+</condition>
+
+</conditions>
+
+
+-<actions>
+
+
+-<action sid="792947696979727" type="Personagem" name="Set animation" id="4">
+
+<param name="Animation" id="0">"Die"</param>
+
+<param name="From" id="1">1</param>
+
+</action>
+
+
+-<action sid="244239577668417" type="System" name="Wait" id="-16">
+
+<param name="Seconds" id="0">1</param>
+
+</action>
+
+<action sid="502682317058734" type="Personagem" name="Destroy" id="-9"/>
+
+<action sid="579083208263121" type="System" name="Restart layout" id="-26"/>
+
+</actions>
+
+</event-block>
+
+<comment>Plataforma falsa caindo</comment>
+
+
+-<event-block sid="347957776134229">
+
+
+-<conditions>
+
+
+-<condition sid="717351383242512" type="Personagem" name="On collision with another object" id="0">
+
+<param name="Object" id="0">plataformafalsa</param>
+
+</condition>
+
+</conditions>
+
+
+-<actions>
+
+
+-<action sid="619354323814285" type="plataformafalsa" name="Set enabled" id="11" behavior="Platform">
+
+<param name="State" id="0">1</param>
+
+</action>
+
+</actions>
+
+</event-block>
+
+
+-<event-block sid="302648159900652">
+
+
+-<conditions>
+
+
+-<condition sid="681446501708025" type="plataformafalsa" name="On collision with another object" id="0">
+
+<param name="Object" id="0">tileMap</param>
+
+</condition>
+
+</conditions>
+
+
+-<actions>
+
+
+-<action sid="494617874324735" type="plataformafalsa" name="Spawn another object" id="0">
+
+<param name="Object" id="0">AGUASupD</param>
+
+<param name="Layer" id="1">2</param>
+
+<param name="Image point" id="2">1</param>
+
+</action>
+
+
+-<action sid="595052004369502" type="plataformafalsa" name="Spawn another object" id="0">
+
+<param name="Object" id="0">AGUASupE</param>
+
+<param name="Layer" id="1">2</param>
+
+<param name="Image point" id="2">2</param>
+
+</action>
+
+
+-<action sid="699836519115465" type="plataformafalsa" name="Spawn another object" id="0">
+
+<param name="Object" id="0">AGUAInfE</param>
+
+<param name="Layer" id="1">2</param>
+
+<param name="Image point" id="2">3</param>
+
+</action>
+
+
+-<action sid="261205307530148" type="plataformafalsa" name="Spawn another object" id="0">
+
+<param name="Object" id="0">AGUAInfD</param>
+
+<param name="Layer" id="1">2</param>
+
+<param name="Image point" id="2">4</param>
+
+</action>
+
+
+-<action sid="313835088653421" type="AGUAInfD" name="Set angle" id="-8">
+
+<param name="Angle" id="0">90</param>
+
+</action>
+
+
+-<action sid="684346165735051" type="AGUAInfE" name="Set angle" id="-8">
+
+<param name="Angle" id="0">90</param>
+
+</action>
+
+
+-<action sid="172198992748213" type="AGUASupE" name="Set angle" id="-8">
+
+<param name="Angle" id="0">180</param>
+
+</action>
+
+
+-<action sid="925279904034939" type="AGUASupD" name="Set angle" id="-8">
+
+<param name="Angle" id="0">360</param>
+
+</action>
+
+
+-<action sid="146509849756105" type="System" name="Wait" id="-16">
+
+<param name="Seconds" id="0">0.5</param>
+
+</action>
+
+<action sid="716944162540127" type="plataformafalsa" name="Destroy" id="-9"/>
+
+</actions>
+
+</event-block>
+
+<comment>Passando para o próximo layout</comment>
+
+
+-<event-block sid="130587395549766">
+
+
+-<conditions>
+
+
+-<condition sid="138261006971826" type="Personagem" name="On collision with another object" id="0">
+
+<param name="Object" id="0">TileGrandefalso</param>
+
+</condition>
+
+</conditions>
+
+
+-<actions>
+
+
+-<action sid="528136781783444" type="TileGrandefalso" name="Set enabled" id="11" behavior="Platform">
+
+<param name="State" id="0">1</param>
+
+</action>
+
+
+-<action sid="367022463631461" type="tilesemgramafalso" name="Set enabled" id="11" behavior="Platform">
+
+<param name="State" id="0">1</param>
+
+</action>
+
+
+-<action sid="927665696424388" type="TileGrandefalso" name="Set enabled" id="0" behavior="Solid">
+
+<param name="State" id="0">0</param>
+
+</action>
+
+
+-<action sid="865442739024333" type="tilesemgramafalso" name="Set enabled" id="0" behavior="Solid">
+
+<param name="State" id="0">0</param>
+
+</action>
+
+
+-<action sid="843867524921455" type="TileGrandefalso" name="Spawn another object" id="0">
+
+<param name="Object" id="0">pedradotile</param>
+
+<param name="Layer" id="1">1</param>
+
+<param name="Image point" id="2">0</param>
+
+</action>
+
+
+-<action sid="251479104743955" type="pedradotile" name="Set angle" id="-8">
+
+<param name="Angle" id="0">90</param>
+
+</action>
+
+</actions>
+
+</event-block>
+
+
+-<event-block sid="545872515505356">
+
+
+-<conditions>
+
+
+-<condition sid="429504520405128" type="Personagem" name="On collision with another object" id="0">
+
+<param name="Object" id="0">Trocadecena</param>
+
+</condition>
+
+</conditions>
+
+
+-<actions>
+
+
+-<action sid="806594379171385" type="Personagem" name="Set visible" id="-15">
+
+<param name="Visibility" id="0">0</param>
+
+</action>
+
+
+-<action sid="130421944288874" type="System" name="Go to layout" id="-2">
+
+<param name="Layout" id="0">Layout 2</param>
+
+</action>
+
+</actions>
+
+</event-block>
+
+
+-<event-block sid="388311304090670">
+
+
+-<conditions>
+
+<condition sid="841758940153334" type="System" name="On start of layout" id="-2"/>
+
+</conditions>
+
+
+-<actions>
+
+
+-<action sid="798584736802343" type="Audio" name="Play" id="0">
+
+<param name="Audio file" id="0">1musicafase</param>
+
+<param name="Loop" id="2">1</param>
+
+<param name="Volume" id="3">-5</param>
+
+<param name="Tag (optional)" id="1">""</param>
+
+</action>
+
+</actions>
+
+</event-block>
+
+</events>
+
+</c2eventsheet>
