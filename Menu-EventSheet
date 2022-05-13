@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+-<c2eventsheet>
+
+<!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+
+
+<name>Menu-ES</name>
+
+
+-<events>
+
+
+-<event-block sid="523230005668294">
+
+
+-<conditions>
+
+
+-<condition sid="470481939061155" type="Mouse" name="On object clicked" id="6">
+
+<param name="Mouse button" id="0">0</param>
+
+<param name="Click type" id="1">0</param>
+
+<param name="Object clicked" id="2">playbutton</param>
+
+</condition>
+
+</conditions>
+
+
+-<actions>
+
+
+-<action sid="639418024971824" type="fadein" name="Set fade-in time" id="2" behavior="Fade">
+
+<param name="Fade-in time" id="0">2</param>
+
+</action>
+
+
+-<action sid="345375850334288" type="fadein" name="Set fade-out time" id="4" behavior="Fade">
+
+<param name="Fade-out time" id="0">0</param>
+
+</action>
+
+<action sid="771753343656397" type="fadein" name="Start fade" id="1" behavior="Fade"/>
+
+
+-<action sid="342283588364763" type="System" name="Wait" id="-16">
+
+<param name="Seconds" id="0">2</param>
+
+</action>
+
+
+-<action sid="688734520862760" type="System" name="Go to layout" id="-2">
+
+<param name="Layout" id="0">Dialogo</param>
+
+</action>
+
+</actions>
+
+</event-block>
+
+
+-<event-block sid="938162613757315">
+
+<conditions/>
+
+<actions/>
+
+</event-block>
+
+</events>
+
+</c2eventsheet>
