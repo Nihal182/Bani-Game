@@ -1,7 +1,5 @@
 # Bani Game
 
-# <h2> BANI </h2>
-
 
 
 ##  Minha primeira ideia para um jogo de plataforma desenvolvido no Construct 2.
@@ -23,6 +21,7 @@
 **Narrativa:** Bani segue uma jornada para coletar cenouras para encher o seu estoque, acaba perdendo algumas no caminho pois se depara com coelhos raivosos que só ficam mais calmos após Bani partilhar algumas cenouras. Na fase final do jogo Bani encontra o Chefe de todos esses coelhos e desvenda o mistério por trás de toda a situação. Este Chefe faz os outros coelhos trabalharem e coletarem cenouras somente para ele, este é o motivo do porque as cenouras vêm desaparecendo e os coelhos estão tão estressados, eles estão apenas famintos. Ao finalizar o jogo e derrotar o chefão, Bani consegue encontrar as cenouras perdidas, partilhar com os outros coelhos e encher o seu estoque para o inverno.
 
 **Escopo**: 1 Level completo o mais polido possível [todos os aspectos funcionando, tudo com efeito feedback, tudo cabível animado, mínimo possível de bug] -> beta
+
 **Listagem de Assets:** Personagens - Coelho/Animações: Correndo/Andando || Pulo || Recebendo dano || Morrendo
 
  Inimigos/Animações: Andando || Furiosos quando Bani se aproxima || Comendo || Caindo no laguinho
