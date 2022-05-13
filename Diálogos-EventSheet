@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+-<c2eventsheet>
+
+<!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+
+
+<name>Diálogo</name>
+
+
+-<events>
+
+
+-<event-group title="Leitura de Diálogo" sid="159800090502313" description="">
+
+
+-<sub-events>
+
+<variable sid="530559991956333" type="number" static="0" name="Coluna" constant="0">0</variable>
+
+<variable sid="198105604188505" type="number" static="0" name="Linha" constant="0">0</variable>
+
+
+-<event-block sid="763345357635313">
+
+<conditions/>
+
+
+-<actions>
+
+
+-<action sid="202832871199114" type="falas" name="Set text" id="0">
+
+<param name="Text" id="0">""</param>
+
+</action>
+
+</actions>
+
+</event-block>
+
+
+-<event-block sid="247047236364528">
+
+
+-<conditions>
+
+
+-<condition sid="803308320274048" type="System" name="For" id="-10">
+
+<param name="Name" id="0">"Linhas"</param>
+
+<param name="Start index" id="1">0</param>
+
+<param name="End index" id="2">Organizadoredefalas.Width</param>
+
+</condition>
+
+</conditions>
+
+
+-<actions>
+
+
+-<action sid="663354525577425" type="System" name="Set value" id="-9">
+
+<param name="Variable" id="0">Linha</param>
+
+<param name="Value" id="1">loopindex</param>
+
+</action>
+
+</actions>
+
+
+-<sub-events>
+
+
+-<event-block sid="607790580720459">
+
+
+-<conditions>
+
+
+-<condition sid="287875666108341" type="Organizadoredefalas" name="Compare at XY" id="1" inverted="1">
+
+<param name="X" id="0">Linha</param>
+
+<param name="Y" id="1">0</param>
+
+<param name="Comparison" id="2">0</param>
+
+<param name="Value" id="3">0</param>
+
+</condition>
+
+
+-<condition sid="740644705172013" type="falas" name="Compare text" id="0">
+
+<param name="Text to compare" id="0">""</param>
+
+<param name="Case sensitivity" id="1">0</param>
+
+</condition>
+
+</conditions>
+
+<actions/>
+
+
+-<sub-events>
+
+
+-<event-block sid="147242442509306">
+
+
+-<conditions>
+
+
+-<condition sid="452190191923272" type="System" name="For" id="-10">
+
+<param name="Name" id="0">"Colunas"</param>
+
+<param name="Start index" id="1">0</param>
+
+<param name="End index" id="2">falas.Height</param>
+
+</condition>
+
+</conditions>
+
+
+-<actions>
+
+
+-<action sid="674948644356919" type="System" name="Set value" id="-9">
+
+<param name="Variable" id="0">Coluna</param>
+
+<param name="Value" id="1">loopindex</param>
+
+</action>
+
+</actions>
+
+
+-<sub-events>
+
+
+-<event-block sid="511923214532753">
+
+
+-<conditions>
+
+
+-<condition sid="333448939774147" type="Organizadoredefalas" name="Compare at XY" id="1">
+
+<param name="X" id="0">Linha</param>
+
+<param name="Y" id="1">0</param>
+
+<param name="Comparison" id="2">0</param>
+
+<param name="Value" id="3">"Personagem A"</param>
+
+</condition>
+
+</conditions>
+
+
+-<actions>
+
+
+-<action sid="889268490843239" type="falas" name="Set text" id="0">
+
+<param name="Text" id="0">Organizadoredefalas.At(Linha,1)</param>
+
+</action>
+
+
+-<action sid="326766848093124" type="Organizadoredefalas" name="Set at XY" id="3">
+
+<param name="X" id="0">Linha</param>
+
+<param name="Y" id="1">0</param>
+
+<param name="Value" id="2">0</param>
+
+</action>
+
+<action sid="346293915749020" type="System" name="Stop loop" id="-24"/>
+
+
+-<action sid="684728963198134" type="System" name="Set group active" id="-12">
+
+<param name="Group name" id="0">"Leitura de Diálogo"</param>
+
+<param name="State" id="1">0</param>
+
+</action>
+
+</actions>
+
+</event-block>
+
+
+-<event-block disabled="1" sid="726455098301064">
+
+
+-<conditions>
+
+
+-<condition sid="590648982274123" type="Organizadoredefalas" name="Compare at XY" id="1">
+
+<param name="X" id="0">Linha</param>
+
+<param name="Y" id="1">0</param>
+
+<param name="Comparison" id="2">0</param>
+
+<param name="Value" id="3">"Personagem B"</param>
+
+</condition>
+
+</conditions>
+
+
+-<actions>
+
+
+-<action sid="917801950573892" type="falas" name="Set text" id="0">
+
+<param name="Text" id="0">Organizadoredefalas.At(Linha,1)</param>
+
+</action>
+
+
+-<action sid="326066032775287" type="Organizadoredefalas" name="Set at XY" id="3">
+
+<param name="X" id="0">Linha</param>
+
+<param name="Y" id="1">0</param>
+
+<param name="Value" id="2">0</param>
+
+</action>
+
+<action sid="751591910146478" type="System" name="Stop loop" id="-24"/>
+
+
+-<action sid="871412300720141" type="System" name="Set group active" id="-12">
+
+<param name="Group name" id="0">"Leitura de Diálogo"</param>
+
+<param name="State" id="1">0</param>
+
+</action>
+
+</actions>
+
+</event-block>
+
+
+-<event-block sid="127982479376967">
+
+
+-<conditions>
+
+
+-<condition sid="777926185275970" type="Organizadoredefalas" name="Compare at XY" id="1">
+
+<param name="X" id="0">Linha</param>
+
+<param name="Y" id="1">0</param>
+
+<param name="Comparison" id="2">0</param>
+
+<param name="Value" id="3">"Fim"</param>
+
+</condition>
+
+</conditions>
+
+
+-<actions>
+
+<action sid="419642051384268" type="System" name="Stop loop" id="-24"/>
+
+
+-<action sid="500921949339761" type="System" name="Set group active" id="-12">
+
+<param name="Group name" id="0">"Leitura de Diálogo"</param>
+
+<param name="State" id="1">0</param>
+
+</action>
+
+</actions>
+
+</event-block>
+
+</sub-events>
+
+</event-block>
+
+</sub-events>
+
+</event-block>
+
+</sub-events>
+
+</event-block>
+
+</sub-events>
+
+</event-group>
+
+
+-<event-group title="Falas Montadas" sid="738534868004780" description="" inactive="1">
+
+
+-<sub-events>
+
+
+-<event-block sid="722424908424495">
+
+<conditions/>
+
+
+-<actions>
+
+
+-<action sid="451313938244639" type="Organizadoredefalas" name="Set at XY" id="3">
+
+<param name="X" id="0">0</param>
+
+<param name="Y" id="1">0</param>
+
+<param name="Value" id="2">"Personagem A"</param>
+
+</action>
+
+
+-<action sid="946597698238358" type="Organizadoredefalas" name="Set at XY" id="3">
+
+<param name="X" id="0">0</param>
+
+<param name="Y" id="1">1</param>
+
+<param name="Value" id="2">"Oh não! Minhas cenouras estão quase acabando. Tenho somente 3 cenouras"</param>
+
+</action>
+
+
+-<action sid="302835886578064" type="Organizadoredefalas" name="Set at XY" id="3">
+
+<param name="X" id="0">1</param>
+
+<param name="Y" id="1">0</param>
+
+<param name="Value" id="2">"Personagem A"</param>
+
+</action>
+
+
+-<action sid="710990859981982" type="Organizadoredefalas" name="Set at XY" id="3">
+
+<param name="X" id="0">1</param>
+
+<param name="Y" id="1">1</param>
+
+<param name="Value" id="2">"Vou precisar sair para encontrar mais cenouras antes do inverno chegar. "</param>
+
+</action>
+
+
+-<action sid="634760659921345" type="Organizadoredefalas" name="Set at XY" id="3">
+
+<param name="X" id="0">2</param>
+
+<param name="Y" id="1">0</param>
+
+<param name="Value" id="2">"Personagem A"</param>
+
+</action>
+
+
+-<action sid="248370867927505" type="Organizadoredefalas" name="Set at XY" id="3">
+
+<param name="X" id="0">2</param>
+
+<param name="Y" id="1">1</param>
+
+<param name="Value" id="2">"Você pode me ajudar nessa missão? "</param>
+
+</action>
+
+
+-<action sid="248553886309903" type="Organizadoredefalas" name="Set at XY" id="3">
+
+<param name="X" id="0">3</param>
+
+<param name="Y" id="1">0</param>
+
+<param name="Value" id="2">"Personagem A"</param>
+
+</action>
+
+
+-<action sid="335594130420706" type="Organizadoredefalas" name="Set at XY" id="3">
+
+<param name="X" id="0">3</param>
+
+<param name="Y" id="1">1</param>
+
+<param name="Value" id="2">"Ótimo! Levarei essas 3 cenouras caso precise usá-las. Vamos nessa?"</param>
+
+</action>
+
+
+-<action sid="659167356678247" type="Organizadoredefalas" name="Set at XY" id="3">
+
+<param name="X" id="0">4</param>
+
+<param name="Y" id="1">0</param>
+
+<param name="Value" id="2">"Personagem A"</param>
+
+</action>
+
+
+-<action sid="615561694348144" type="Organizadoredefalas" name="Set at XY" id="3">
+
+<param name="X" id="0">4</param>
+
+<param name="Y" id="1">1</param>
+
+<param name="Value" id="2">"Aperte Enter para partimos"</param>
+
+</action>
+
+
+-<action sid="162735138118339" type="Organizadoredefalas" name="Set at XY" id="3">
+
+<param name="X" id="0">5</param>
+
+<param name="Y" id="1">0</param>
+
+<param name="Value" id="2">"Fim"</param>
+
+</action>
+
+</actions>
+
+</event-block>
+
+
+-<event-block sid="748710719554689">
+
+<conditions/>
+
+
+-<actions>
+
+
+-<action sid="317915910952421" type="System" name="Set group active" id="-12">
+
+<param name="Group name" id="0">"Falas Montadas"</param>
+
+<param name="State" id="1">0</param>
+
+</action>
+
+</actions>
+
+</event-block>
+
+</sub-events>
+
+</event-group>
+
+
+-<event-block sid="108238994647806">
+
+
+-<conditions>
+
+
+-<condition sid="945107112458087" type="Keyboard" name="On key pressed" id="0">
+
+<param name="Key" id="0">32</param>
+
+</condition>
+
+</conditions>
+
+
+-<actions>
+
+
+-<action sid="462862590512338" type="System" name="Set group active" id="-12">
+
+<param name="Group name" id="0">"Leitura de Diálogo"</param>
+
+<param name="State" id="1">1</param>
+
+</action>
+
+</actions>
+
+</event-block>
+
+
+-<event-block sid="263688858518075">
+
+
+-<conditions>
+
+<condition sid="552961873167353" type="System" name="On start of layout" id="-2"/>
+
+</conditions>
+
+
+-<actions>
+
+
+-<action sid="535380370484701" type="System" name="Set group active" id="-12">
+
+<param name="Group name" id="0">"Falas Montadas"</param>
+
+<param name="State" id="1">1</param>
+
+</action>
+
+
+-<action sid="358848274656087" type="Personagem" name="Set mirrored" id="7">
+
+<param name="State" id="0">0</param>
+
+</action>
+
+</actions>
+
+</event-block>
+
+
+-<event-block sid="294842533092319">
+
+
+-<conditions>
+
+
+-<condition sid="929587263844982" type="Keyboard" name="On key pressed" id="0">
+
+<param name="Key" id="0">13</param>
+
+</condition>
+
+</conditions>
+
+
+-<actions>
+
+
+-<action sid="325916180342094" type="fadein" name="Set fade-in time" id="2" behavior="Fade">
+
+<param name="Fade-in time" id="0">4</param>
+
+</action>
+
+
+-<action sid="304760995522947" type="System" name="Go to layout" id="-2">
+
+<param name="Layout" id="0">Layout 1</param>
+
+</action>
+
+</actions>
+
+</event-block>
+
+
+-<event-block sid="668619179804242">
+
+
+-<conditions>
+
+<condition sid="871446957924725" type="System" name="On start of layout" id="-2"/>
+
+</conditions>
+
+
+-<actions>
+
+
+-<action sid="750673827956502" type="Audio" name="Play" id="0">
+
+<param name="Audio file" id="0">1musicafase</param>
+
+<param name="Loop" id="2">1</param>
+
+<param name="Volume" id="3">-5</param>
+
+<param name="Tag (optional)" id="1">""</param>
+
+</action>
+
+</actions>
+
+</event-block>
+
+</events>
+
+</c2eventsheet>
