@@ -1,0 +1,1255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+-<c2eventsheet>
+
+<!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+
+
+<name>Personagem</name>
+
+
+-<events>
+
+<comment>Movimentação do Personagem</comment>
+
+
+-<event-block sid="615611955945023">
+
+
+-<conditions>
+
+
+-<condition sid="382329429612469" type="Personagem" name="Is playing" inverted="1" id="2">
+
+<param name="Animation" id="0">"Die"</param>
+
+</condition>
+
+</conditions>
+
+<actions/>
+
+
+-<sub-events>
+
+
+-<event-block sid="466949509252452">
+
+
+-<conditions>
+
+
+-<condition sid="223776248792092" type="Keyboard" name="On key pressed" id="0">
+
+<param name="Key" id="0">87</param>
+
+</condition>
+
+</conditions>
+
+
+-<actions>
+
+
+-<action sid="477327719028614" type="Personagem" name="Simulate control" id="7" behavior="Platform">
+
+<param name="Control" id="0">2</param>
+
+</action>
+
+</actions>
+
+</event-block>
+
+
+-<event-block sid="192554146307629">
+
+
+-<conditions>
+
+
+-<condition sid="453178356186786" type="Keyboard" name="Key is down" id="2">
+
+<param name="Key" id="0">68</param>
+
+</condition>
+
+</conditions>
+
+
+-<actions>
+
+
+-<action sid="664770640180129" type="Personagem" name="Simulate control" id="7" behavior="Platform">
+
+<param name="Control" id="0">1</param>
+
+</action>
+
+
+-<action sid="513679317578816" type="Personagem" name="Set animation" id="4">
+
+<param name="Animation" id="0">"WALK"</param>
+
+<param name="From" id="1">1</param>
+
+</action>
+
+
+-<action sid="468382383265797" type="Personagem" name="Set mirrored" id="7">
+
+<param name="State" id="0">1</param>
+
+</action>
+
+</actions>
+
+</event-block>
+
+
+-<event-block sid="519659910945612">
+
+
+-<conditions>
+
+
+-<condition sid="224427168399181" type="Keyboard" name="Key is down" id="2">
+
+<param name="Key" id="0">65</param>
+
+</condition>
+
+</conditions>
+
+
+-<actions>
+
+
+-<action sid="290755710331475" type="Personagem" name="Simulate control" id="7" behavior="Platform">
+
+<param name="Control" id="0">0</param>
+
+</action>
+
+
+-<action sid="794060012820475" type="Personagem" name="Set animation" id="4">
+
+<param name="Animation" id="0">"WALK"</param>
+
+<param name="From" id="1">1</param>
+
+</action>
+
+
+-<action sid="649924185012021" type="Personagem" name="Set mirrored" id="7">
+
+<param name="State" id="0">0</param>
+
+</action>
+
+</actions>
+
+</event-block>
+
+</sub-events>
+
+</event-block>
+
+<comment>Atirando projétil de cenoura</comment>
+
+
+-<event-block sid="948167351014607">
+
+
+-<conditions>
+
+
+-<condition sid="969241920645191" type="Personagem" name="Compare instance variable" id="-7">
+
+<param name="Instance variable" id="0">Carrots</param>
+
+<param name="Comparison" id="1">4</param>
+
+<param name="Value" id="2">0</param>
+
+</condition>
+
+</conditions>
+
+<actions/>
+
+
+-<sub-events>
+
+
+-<event-block sid="808229599202824">
+
+
+-<conditions>
+
+
+-<condition sid="688975714544321" type="Keyboard" name="On key pressed" id="0">
+
+<param name="Key" id="0">70</param>
+
+</condition>
+
+<condition sid="848473145388030" type="Personagem" name="Is mirrored" inverted="1" id="7"/>
+
+</conditions>
+
+
+-<actions>
+
+
+-<action sid="763411054654073" type="Personagem" name="Spawn another object" id="0">
+
+<param name="Object" id="0">cenouraProjetil</param>
+
+<param name="Layer" id="1">1</param>
+
+<param name="Image point" id="2">2</param>
+
+</action>
+
+
+-<action sid="619118239105671" type="cenouraProjetil" name="Set angle" id="-8">
+
+<param name="Angle" id="0">0</param>
+
+</action>
+
+
+-<action sid="129918251886151" type="Personagem" name="Subtract from" id="-12">
+
+<param name="Instance variable" id="0">Carrots</param>
+
+<param name="Value" id="1">1</param>
+
+</action>
+
+
+-<action sid="388202531820249" type="contagemdecenouras" name="Set text" id="0">
+
+<param name="Text" id="0">Personagem.Carrots</param>
+
+</action>
+
+</actions>
+
+</event-block>
+
+
+-<event-block sid="768031339874568">
+
+
+-<conditions>
+
+
+-<condition sid="400464540154448" type="Keyboard" name="On key pressed" id="0">
+
+<param name="Key" id="0">70</param>
+
+</condition>
+
+<condition sid="417962339121017" type="Personagem" name="Is mirrored" id="7"/>
+
+</conditions>
+
+
+-<actions>
+
+
+-<action sid="413208703554037" type="Personagem" name="Spawn another object" id="0">
+
+<param name="Object" id="0">cenouraProjetil</param>
+
+<param name="Layer" id="1">1</param>
+
+<param name="Image point" id="2">2</param>
+
+</action>
+
+
+-<action sid="628298079222935" type="cenouraProjetil" name="Set angle" id="-8">
+
+<param name="Angle" id="0">180</param>
+
+</action>
+
+
+-<action sid="860754583270785" type="Personagem" name="Subtract from" id="-12">
+
+<param name="Instance variable" id="0">Carrots</param>
+
+<param name="Value" id="1">1</param>
+
+</action>
+
+
+-<action sid="771748996654646" type="contagemdecenouras" name="Set text" id="0">
+
+<param name="Text" id="0">Personagem.Carrots</param>
+
+</action>
+
+</actions>
+
+</event-block>
+
+
+-<event-block disabled="1" sid="501304228259896">
+
+
+-<conditions>
+
+<condition sid="491984545641715" type="cenouraProjetil" name="On created" id="-18"/>
+
+</conditions>
+
+
+-<actions>
+
+
+-<action sid="744996821687880" type="System" name="Wait" id="-16">
+
+<param name="Seconds" id="0">3</param>
+
+</action>
+
+<action sid="825899981456853" type="cenouraProjetil" name="Destroy" id="-9"/>
+
+</actions>
+
+</event-block>
+
+<comment>Sem cenouras</comment>
+
+
+-<event-block sid="786994076856765">
+
+
+-<conditions>
+
+
+-<condition sid="427088136063115" type="Personagem" name="Compare instance variable" id="-7">
+
+<param name="Instance variable" id="0">Carrots</param>
+
+<param name="Comparison" id="1">0</param>
+
+<param name="Value" id="2">0</param>
+
+</condition>
+
+</conditions>
+
+
+-<actions>
+
+<action sid="652721962498547" type="cenoura" name="Stop" id="2"/>
+
+
+-<action sid="171640322947822" type="Personagem" name="Set animation" id="4">
+
+<param name="Animation" id="0">"Die"</param>
+
+<param name="From" id="1">1</param>
+
+</action>
+
+
+-<action sid="166932767905850" type="System" name="Wait" id="-16">
+
+<param name="Seconds" id="0">1.0</param>
+
+</action>
+
+<action sid="372431280071814" type="Personagem" name="Destroy" id="-9"/>
+
+</actions>
+
+</event-block>
+
+
+-<event-block sid="436326336797632">
+
+
+-<conditions>
+
+<condition sid="144393655688077" type="Personagem" name="On destroyed" id="-19"/>
+
+</conditions>
+
+
+-<actions>
+
+
+-<action sid="571933274576664" type="Personagem" name="Set value" id="-10">
+
+<param name="Instance variable" id="0">Carrots</param>
+
+<param name="Value" id="1">0</param>
+
+</action>
+
+</actions>
+
+</event-block>
+
+</sub-events>
+
+</event-block>
+
+<comment>Coletando cenouras </comment>
+
+
+-<event-block sid="260842820560270">
+
+
+-<conditions>
+
+
+-<condition sid="337231152350458" type="cenoura" name="On collision with another object" id="0">
+
+<param name="Object" id="0">Personagem</param>
+
+</condition>
+
+</conditions>
+
+
+-<actions>
+
+
+-<action sid="464101525630309" type="Personagem" name="Add to" id="-11">
+
+<param name="Instance variable" id="0">Carrots</param>
+
+<param name="Value" id="1">1</param>
+
+</action>
+
+
+-<action sid="233309616601014" type="contagemdecenouras" name="Set text" id="0">
+
+<param name="Text" id="0">Personagem.Carrots</param>
+
+</action>
+
+<action sid="560941165612793" type="cenoura" name="Destroy" id="-9"/>
+
+</actions>
+
+</event-block>
+
+<comment>Efeitos e Partículas</comment>
+
+
+-<event-block sid="297432424365151">
+
+
+-<conditions>
+
+<condition sid="391641449568490" type="System" name="On start of layout" id="-2"/>
+
+</conditions>
+
+
+-<actions>
+
+
+-<action sid="517226809994772" type="contagemdecenouras" name="Set text" id="0">
+
+<param name="Text" id="0">Personagem.Carrots</param>
+
+</action>
+
+
+-<action sid="332509015870029" type="poeirinha" name="Pin to object" id="0" behavior="Pin">
+
+<param name="Pin to" id="0">Personagem</param>
+
+<param name="Mode" id="1">0</param>
+
+</action>
+
+
+-<action sid="444224934961923" type="Attack" name="Bounce off object" id="4" behavior="Bullet">
+
+<param name="Object" id="0">Personagem</param>
+
+</action>
+
+</actions>
+
+</event-block>
+
+
+-<event-block sid="916975038887357">
+
+
+-<conditions>
+
+<condition sid="172415849751619" type="Personagem" name="Is moving" id="0" behavior="Platform"/>
+
+<condition sid="385145691004410" type="Personagem" name="Is on floor" id="2" behavior="Platform"/>
+
+<condition sid="674157612367979" type="Personagem" name="Is mirrored" inverted="1" id="7"/>
+
+</conditions>
+
+
+-<actions>
+
+<action sid="556025817415894" type="poeirinha" name="Unpin" id="1" behavior="Pin"/>
+
+
+-<action sid="527549839996033" type="poeirinha" name="Set position" id="-3">
+
+<param name="X" id="0">Personagem.ImagePointX(1)</param>
+
+<param name="Y" id="1">Personagem.ImagePointY(1)</param>
+
+</action>
+
+
+-<action sid="462804012150932" type="poeirinha" name="Set rate" id="1">
+
+<param name="Rate" id="0">25</param>
+
+</action>
+
+
+-<action sid="815796237359982" type="poeirinha" name="Pin to object" id="0" behavior="Pin">
+
+<param name="Pin to" id="0">Personagem</param>
+
+<param name="Mode" id="1">0</param>
+
+</action>
+
+</actions>
+
+</event-block>
+
+
+-<event-block sid="769607311340324">
+
+
+-<conditions>
+
+<condition sid="904605968628892" type="Personagem" name="Is moving" id="0" behavior="Platform"/>
+
+<condition sid="393482118608468" type="Personagem" name="Is on floor" id="2" behavior="Platform"/>
+
+<condition sid="372532374954236" type="Personagem" name="Is mirrored" id="7"/>
+
+</conditions>
+
+
+-<actions>
+
+<action sid="409728560718898" type="poeirinha" name="Unpin" id="1" behavior="Pin"/>
+
+
+-<action sid="753185149662645" type="poeirinha" name="Set position" id="-3">
+
+<param name="X" id="0">Personagem.ImagePointX(1)</param>
+
+<param name="Y" id="1">Personagem.ImagePointY(1)</param>
+
+</action>
+
+
+-<action sid="252929572114249" type="poeirinha" name="Set rate" id="1">
+
+<param name="Rate" id="0">25</param>
+
+</action>
+
+
+-<action sid="883777763062605" type="poeirinha" name="Pin to object" id="0" behavior="Pin">
+
+<param name="Pin to" id="0">Personagem</param>
+
+<param name="Mode" id="1">0</param>
+
+</action>
+
+</actions>
+
+</event-block>
+
+
+-<event-block sid="412542784484293">
+
+
+-<conditions>
+
+<condition sid="691108384378273" type="Personagem" name="Is moving" inverted="1" id="0" behavior="Platform"/>
+
+<condition sid="412669758543347" type="Personagem" name="Is on floor" id="2" behavior="Platform"/>
+
+</conditions>
+
+
+-<actions>
+
+
+-<action sid="913903129331928" type="poeirinha" name="Set rate" id="1">
+
+<param name="Rate" id="0">0</param>
+
+</action>
+
+</actions>
+
+</event-block>
+
+
+-<event-block sid="719583543358310">
+
+
+-<conditions>
+
+<condition sid="233841408144654" type="Personagem" name="Is jumping" id="3" behavior="Platform"/>
+
+</conditions>
+
+
+-<actions>
+
+
+-<action sid="760979386293983" type="poeirinha" name="Set rate" id="1">
+
+<param name="Rate" id="0">0</param>
+
+</action>
+
+</actions>
+
+</event-block>
+
+<comment>Colidindo com Inimigos</comment>
+
+
+-<event-block sid="624339145795932">
+
+
+-<conditions>
+
+
+-<condition sid="828555014418800" type="Personagem" name="On collision with another object" id="0">
+
+<param name="Object" id="0">Enemy</param>
+
+</condition>
+
+<condition sid="945379472441368" type="Personagem" name="Is mirrored" id="7"/>
+
+
+-<condition sid="491637967400655" type="Personagem" name="Compare instance variable" id="-7">
+
+<param name="Instance variable" id="0">Carrots</param>
+
+<param name="Comparison" id="1">4</param>
+
+<param name="Value" id="2">0</param>
+
+</condition>
+
+
+-<condition sid="418623785285681" type="Personagem" name="Is playing" inverted="1" id="2">
+
+<param name="Animation" id="0">"Damage"</param>
+
+</condition>
+
+</conditions>
+
+
+-<actions>
+
+
+-<action sid="564815829066403" type="Personagem" name="Shake" id="0" behavior="ScrollTo">
+
+<param name="Magnitude" id="0">15</param>
+
+<param name="Duration" id="1">0.3</param>
+
+<param name="Mode" id="2">0</param>
+
+</action>
+
+
+-<action sid="714737265498367" type="Personagem" name="Set animation" id="4">
+
+<param name="Animation" id="0">"Damage"</param>
+
+<param name="From" id="1">1</param>
+
+</action>
+
+
+-<action sid="230172487048553" type="Personagem" name="Subtract from" id="-12">
+
+<param name="Instance variable" id="0">Carrots</param>
+
+<param name="Value" id="1">1</param>
+
+</action>
+
+
+-<action sid="214211739180458" type="contagemdecenouras" name="Set text" id="0">
+
+<param name="Text" id="0">Personagem.Carrots</param>
+
+</action>
+
+</actions>
+
+</event-block>
+
+
+-<event-block sid="943785105394208">
+
+
+-<conditions>
+
+
+-<condition sid="710626063058746" type="Personagem" name="On collision with another object" id="0">
+
+<param name="Object" id="0">Enemy</param>
+
+</condition>
+
+<condition sid="883990624527987" type="Personagem" name="Is mirrored" inverted="1" id="7"/>
+
+
+-<condition sid="591501627608028" type="Personagem" name="Compare instance variable" id="-7">
+
+<param name="Instance variable" id="0">Carrots</param>
+
+<param name="Comparison" id="1">4</param>
+
+<param name="Value" id="2">0</param>
+
+</condition>
+
+
+-<condition sid="357967705627641" type="Personagem" name="Is playing" inverted="1" id="2">
+
+<param name="Animation" id="0">"Damage"</param>
+
+</condition>
+
+</conditions>
+
+
+-<actions>
+
+
+-<action sid="787701099008794" type="Personagem" name="Shake" id="0" behavior="ScrollTo">
+
+<param name="Magnitude" id="0">15</param>
+
+<param name="Duration" id="1">0.3</param>
+
+<param name="Mode" id="2">0</param>
+
+</action>
+
+
+-<action sid="378911127613639" type="Personagem" name="Set animation" id="4">
+
+<param name="Animation" id="0">"Damage"</param>
+
+<param name="From" id="1">1</param>
+
+</action>
+
+
+-<action sid="797494220386621" type="Personagem" name="Subtract from" id="-12">
+
+<param name="Instance variable" id="0">Carrots</param>
+
+<param name="Value" id="1">1</param>
+
+</action>
+
+
+-<action sid="607701225359639" type="contagemdecenouras" name="Set text" id="0">
+
+<param name="Text" id="0">Personagem.Carrots</param>
+
+</action>
+
+</actions>
+
+</event-block>
+
+
+-<event-block sid="922489169981732">
+
+
+-<conditions>
+
+
+-<condition sid="632683468987065" type="Personagem" name="On collision with another object" id="0">
+
+<param name="Object" id="0">Enemy</param>
+
+</condition>
+
+<condition sid="519296622711380" type="Personagem" name="Is mirrored" inverted="1" id="7"/>
+
+
+-<condition sid="149980893246189" type="Personagem" name="Compare instance variable" id="-7">
+
+<param name="Instance variable" id="0">Carrots</param>
+
+<param name="Comparison" id="1">0</param>
+
+<param name="Value" id="2">0</param>
+
+</condition>
+
+
+-<condition sid="211512988037989" type="Personagem" name="Is playing" inverted="1" id="2">
+
+<param name="Animation" id="0">"Damage"</param>
+
+</condition>
+
+</conditions>
+
+
+-<actions>
+
+
+-<action sid="221183929714732" type="Personagem" name="Shake" id="0" behavior="ScrollTo">
+
+<param name="Magnitude" id="0">15</param>
+
+<param name="Duration" id="1">0.3</param>
+
+<param name="Mode" id="2">0</param>
+
+</action>
+
+
+-<action sid="999152364044121" type="Personagem" name="Set animation" id="4">
+
+<param name="Animation" id="0">"Die"</param>
+
+<param name="From" id="1">1</param>
+
+</action>
+
+
+-<action sid="509507320525000" type="System" name="Wait" id="-16">
+
+<param name="Seconds" id="0">0.3</param>
+
+</action>
+
+<action sid="512114452484783" type="Personagem" name="Destroy" id="-9"/>
+
+</actions>
+
+</event-block>
+
+
+-<event-block sid="315499432892382">
+
+
+-<conditions>
+
+
+-<condition sid="283746587628821" type="Personagem" name="On collision with another object" id="0">
+
+<param name="Object" id="0">Enemy</param>
+
+</condition>
+
+<condition sid="861643086713886" type="Personagem" name="Is mirrored" id="7"/>
+
+
+-<condition sid="170357584364166" type="Personagem" name="Compare instance variable" id="-7">
+
+<param name="Instance variable" id="0">Carrots</param>
+
+<param name="Comparison" id="1">0</param>
+
+<param name="Value" id="2">0</param>
+
+</condition>
+
+
+-<condition sid="803193932954556" type="Personagem" name="Is playing" inverted="1" id="2">
+
+<param name="Animation" id="0">"Damage"</param>
+
+</condition>
+
+</conditions>
+
+
+-<actions>
+
+
+-<action sid="616453791429873" type="Personagem" name="Shake" id="0" behavior="ScrollTo">
+
+<param name="Magnitude" id="0">15</param>
+
+<param name="Duration" id="1">0.3</param>
+
+<param name="Mode" id="2">0</param>
+
+</action>
+
+
+-<action sid="670077849136853" type="Personagem" name="Set animation" id="4">
+
+<param name="Animation" id="0">"Die"</param>
+
+<param name="From" id="1">1</param>
+
+</action>
+
+
+-<action sid="579330782392930" type="System" name="Wait" id="-16">
+
+<param name="Seconds" id="0">1.0</param>
+
+</action>
+
+<action sid="365122184656401" type="Personagem" name="Destroy" id="-9"/>
+
+</actions>
+
+</event-block>
+
+
+-<event-block sid="328803906690420">
+
+
+-<conditions>
+
+
+-<condition sid="762102140910863" type="cenouraProjetil" name="On collision with another object" id="0">
+
+<param name="Object" id="0">Colisoes</param>
+
+</condition>
+
+</conditions>
+
+
+-<actions>
+
+
+-<action sid="773670532466128" type="cenouraProjetil" name="Set enabled" id="5" behavior="Bullet">
+
+<param name="State" id="0">0</param>
+
+</action>
+
+</actions>
+
+</event-block>
+
+
+-<event-block sid="757210731909774">
+
+
+-<conditions>
+
+<condition sid="772895617667024" type="Personagem" name="On destroyed" id="-19"/>
+
+</conditions>
+
+
+-<actions>
+
+
+-<action sid="769907843640823" type="System" name="Wait" id="-16">
+
+<param name="Seconds" id="0">1.0</param>
+
+</action>
+
+<action sid="326547107950390" type="System" name="Restart layout" id="-26"/>
+
+</actions>
+
+</event-block>
+
+
+-<event-block sid="744601707500141">
+
+
+-<conditions>
+
+
+-<condition sid="925432155431675" type="Personagem" name="On collision with another object" id="0">
+
+<param name="Object" id="0">peixe</param>
+
+</condition>
+
+</conditions>
+
+
+-<actions>
+
+
+-<action sid="481075657951786" type="Personagem" name="Shake" id="0" behavior="ScrollTo">
+
+<param name="Magnitude" id="0">15</param>
+
+<param name="Duration" id="1">0.3</param>
+
+<param name="Mode" id="2">0</param>
+
+</action>
+
+
+-<action sid="155432867215464" type="Personagem" name="Set animation" id="4">
+
+<param name="Animation" id="0">"Die"</param>
+
+<param name="From" id="1">1</param>
+
+</action>
+
+
+-<action sid="632650659418279" type="System" name="Wait" id="-16">
+
+<param name="Seconds" id="0">1.0</param>
+
+</action>
+
+<action sid="859539831533697" type="Personagem" name="Destroy" id="-9"/>
+
+</actions>
+
+</event-block>
+
+
+-<event-block sid="481042350643072">
+
+
+-<conditions>
+
+
+-<condition sid="594259686735772" type="Personagem" name="On collision with another object" id="0">
+
+<param name="Object" id="0">Sprite3</param>
+
+</condition>
+
+<condition sid="621228973157374" type="Personagem" name="Is mirrored" id="7"/>
+
+
+-<condition sid="298455300516461" type="Personagem" name="Compare instance variable" id="-7">
+
+<param name="Instance variable" id="0">Carrots</param>
+
+<param name="Comparison" id="1">4</param>
+
+<param name="Value" id="2">0</param>
+
+</condition>
+
+</conditions>
+
+
+-<actions>
+
+
+-<action sid="588345607044591" type="Personagem" name="Shake" id="0" behavior="ScrollTo">
+
+<param name="Magnitude" id="0">20</param>
+
+<param name="Duration" id="1">0.4</param>
+
+<param name="Mode" id="2">0</param>
+
+</action>
+
+
+-<action sid="758931430990051" type="Personagem" name="Set animation" id="4">
+
+<param name="Animation" id="0">"Damage"</param>
+
+<param name="From" id="1">1</param>
+
+</action>
+
+
+-<action sid="905342923453403" type="Personagem" name="Subtract from" id="-12">
+
+<param name="Instance variable" id="0">Carrots</param>
+
+<param name="Value" id="1">1</param>
+
+</action>
+
+
+-<action sid="483897152321597" type="contagemdecenouras" name="Set text" id="0">
+
+<param name="Text" id="0">Personagem.Carrots</param>
+
+</action>
+
+</actions>
+
+</event-block>
+
+
+-<event-block sid="779252996643847">
+
+
+-<conditions>
+
+
+-<condition sid="567920793249536" type="Personagem" name="On collision with another object" id="0">
+
+<param name="Object" id="0">Sprite3</param>
+
+</condition>
+
+<condition sid="546281432032655" type="Personagem" name="Is mirrored" inverted="1" id="7"/>
+
+
+-<condition sid="114725833861687" type="Personagem" name="Compare instance variable" id="-7">
+
+<param name="Instance variable" id="0">Carrots</param>
+
+<param name="Comparison" id="1">4</param>
+
+<param name="Value" id="2">0</param>
+
+</condition>
+
+</conditions>
+
+
+-<actions>
+
+
+-<action sid="288040306795598" type="Personagem" name="Shake" id="0" behavior="ScrollTo">
+
+<param name="Magnitude" id="0">20</param>
+
+<param name="Duration" id="1">0.4</param>
+
+<param name="Mode" id="2">0</param>
+
+</action>
+
+
+-<action sid="362630351793677" type="Personagem" name="Set animation" id="4">
+
+<param name="Animation" id="0">"Damage"</param>
+
+<param name="From" id="1">1</param>
+
+</action>
+
+
+-<action sid="538661067667702" type="Personagem" name="Subtract from" id="-12">
+
+<param name="Instance variable" id="0">Carrots</param>
+
+<param name="Value" id="1">1</param>
+
+</action>
+
+
+-<action sid="792718771796224" type="contagemdecenouras" name="Set text" id="0">
+
+<param name="Text" id="0">Personagem.Carrots</param>
+
+</action>
+
+</actions>
+
+</event-block>
+
+
+-<event-block sid="832819263263975">
+
+
+-<conditions>
+
+
+-<condition sid="639349044701381" type="Personagem" name="On collision with another object" id="0">
+
+<param name="Object" id="0">Sprite3</param>
+
+</condition>
+
+<condition sid="712192237547910" type="Personagem" name="Is mirrored" id="7"/>
+
+
+-<condition sid="306759341057649" type="Personagem" name="Compare instance variable" id="-7">
+
+<param name="Instance variable" id="0">Carrots</param>
+
+<param name="Comparison" id="1">4</param>
+
+<param name="Value" id="2">0</param>
+
+</condition>
+
+</conditions>
+
+
+-<actions>
+
+
+-<action sid="246790471101656" type="Personagem" name="Shake" id="0" behavior="ScrollTo">
+
+<param name="Magnitude" id="0">20</param>
+
+<param name="Duration" id="1">0.4</param>
+
+<param name="Mode" id="2">0</param>
+
+</action>
+
+
+-<action sid="334608651959036" type="Personagem" name="Set animation" id="4">
+
+<param name="Animation" id="0">"Damage"</param>
+
+<param name="From" id="1">1</param>
+
+</action>
+
+
+-<action sid="395512732438196" type="Personagem" name="Subtract from" id="-12">
+
+<param name="Instance variable" id="0">Carrots</param>
+
+<param name="Value" id="1">1</param>
+
+</action>
+
+
+-<action sid="410280829996317" type="contagemdecenouras" name="Set text" id="0">
+
+<param name="Text" id="0">Personagem.Carrots</param>
+
+</action>
+
+</actions>
+
+</event-block>
+
+</events>
+
+</c2eventsheet>
