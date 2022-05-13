@@ -56,5 +56,6 @@ Fala 8 - (Bani) Tornox está usando esses pobres coelhos de escravos para coleta
 
 **Ato 2** Fala 9 - (Chefão) Arrghh minhas cenouras estão caindo. Mexam-se exército de inúteis, parem de comer e peguem esse coelho!
 
-**Ato 3** Fala 10 - (Coelhos) É a primeira vez que estamos nos alimentando bem desde que começamos a trabalhar para Tornox… Obrigada Bani pelas cenouras!Fala 11 - (Coelhos) De barriga cheia conseguimos pensar melhor. Derrubem esse tirano da plataforma!
+**Ato 3** Fala 10 - (Coelhos) É a primeira vez que estamos nos alimentando bem desde que começamos a trabalhar para Tornox… Obrigada Bani pelas cenouras!
+Fala 11 - (Coelhos) De barriga cheia conseguimos pensar melhor. Derrubem esse tirano da plataforma!
 
