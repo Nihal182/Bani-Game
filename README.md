@@ -1,4 +1,5 @@
-#                                                             Bani Game
+# | Bani Game |
+  | :--------:|
 ![BANI](https://raw.githubusercontent.com/Nihal182/Bani-Game/main/GeneralArts/menuprincipal/Default/000.png)
 
 ##  Minha primeira ideia para um jogo de plataforma desenvolvido no Construct 2. 
