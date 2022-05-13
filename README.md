@@ -1,4 +1,4 @@
-# Bani Game
+# <center>Bani Game</center>
 
 ![BANI](https://raw.githubusercontent.com/Nihal182/Bani-Game/main/GeneralArts/menuprincipal/Default/000.png)
 
