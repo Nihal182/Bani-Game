@@ -2,7 +2,7 @@
 
 
 
-##  Minha primeira ideia para um jogo de plataforma desenvolvido no Construct 2.
+##  Minha primeira ideia para um jogo de plataforma desenvolvido no Construct 2. Ainda em andamento, em breve será postado itch.io e deixarei o link aqui.
 
 
 
